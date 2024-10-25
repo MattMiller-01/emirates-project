@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listings",
+  "info": {
+    "singularName": "listing",
+    "pluralName": "listings",
+    "displayName": "listing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "cidade": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "property": {
+      "type": "enumeration",
+      "enum": [
+        "Apartamento",
+        "Casa",
+        "Villa",
+        "Penthouse",
+        "Casa de Condomínio",
+        "Studio/flat",
+        "Chacara"
+      ]
+    },
+    "Created": {
+      "type": "date"
+    },
+    "Updated": {
+      "type": "date"
+    },
+    "Quartos": {
+      "type": "integer"
+    },
+    "metros": {
+      "type": "integer"
+    },
+    "estado": {
+      "type": "string"
+    },
+    "bairro": {
+      "type": "string"
+    }
+  }
+}
