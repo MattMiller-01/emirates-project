@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap");
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Raleway', sans-serif; /* For body text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif; /* For headings */
+}
+
+nav {
+  backdrop-filter: blur(10px); /* Adjust the blur intensity */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Add your custom animation class here */
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out; /* Adjust duration and easing as needed */
+  }
+}
+
+/* Animation Definitions */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Parallax effect for the background */
+.parallax-bg {
+  background-size: cover;
+  background-attachment: fixed; /* Creates the parallax effect */
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  will-change: transform;
+}
+
+
